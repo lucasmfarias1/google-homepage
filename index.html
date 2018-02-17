@@ -8,14 +8,23 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <a href="#">Gmail</a>
+    <a href="#">Imagens</a>
+    <a href="#" id="apps"></a>
+    <button id="login-button" type="button">Fazer login</button>
+  </header>
 
   <main>
     <img id="logo" src="images/google-logo.png" width="272" height="92">
     <form>
-      <input id="search-text" size="40"><br>
-      <input style="width: 125px" class="button" type="submit" value="Google Search">
-      <input style="width: 145px" class="button" type="submit" value="I'm Feeling Lucky">
+      <div id="search-box">
+        <input id="search-text" size="40">
+        <a id="keyboard-icon" href="#"><img src="images/keyboard.gif"></a>
+      </div>
+
+      <input class="button" type="submit" value="Pesquisa Google">
+      <input class="button" type="submit" value="Estou com sorte">
     </form>
   </main>
 
