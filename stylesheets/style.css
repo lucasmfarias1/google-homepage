@@ -13,7 +13,7 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 10fr 4fr;
+  grid-template-rows: 1fr 15fr 2fr;
   grid-template-areas: 'header'
                        'main'
                        'footer';
@@ -32,10 +32,15 @@ main {
   width: 100%;
   grid-area: main;
   align-self: center;
+  position: relative;
+  bottom: 10%;
 }
 
 footer {
   grid-area: footer;
+  background-color: #f2f2f2;
+  border-top: 1px solid #ddd;
+  font-size: small;
 }
 
 form {
@@ -44,10 +49,37 @@ form {
   text-align: center;
 }
 
+span {
+  color: rgba(0,0,0,.54);
+  font-size: 15px;
+  display: block;
+  text-align: left;
+  padding: 10px 27px;
+  border-bottom: 1px solid #ddd;
+}
+
 a {
   text-decoration: none;
   color: black;
   margin: 0 5px;
+}
+
+footer a {
+  color: #666;
+}
+
+footer div {
+  padding-top: 17px;
+}
+
+div#left-footer {
+  float: left;
+  padding-left: 22px;
+}
+
+div#right-footer {
+  float: right;
+  padding-right: 22px;
 }
 
 button {
@@ -103,20 +135,6 @@ a#apps:hover {
    padding: 0 10px;
  }
 
- input.button {
-   margin: 0 5px;
-   box-sizing: border-box;
-   height: 40px;
-   border-radius: 0;
-   border: none;
-   font-weight: 700;
-   font-size: 13px;
-   padding: 11px 15px;
-   background-color: #f2f2f2;
-   border-radius: 2px;
-   color: #757575;
- }
-
  div#search-box {
    width: 100%;
    border: 1px solid #eaeaea;
@@ -140,8 +158,21 @@ a#apps:hover {
  input#search-text {
  }
 
+ input.button {
+   margin: 0 5px;
+   box-sizing: border-box;
+   height: 40px;
+   border-radius: 0;
+   border: none;
+   font-weight: 700;
+   font-size: 13px;
+   padding: 11px 15px;
+   background-color: #f2f2f2;
+   border-radius: 2px;
+   color: #757575;
+ }
+
  input.button:hover {
-   /* box-sizing: border-box; */
    background-color: #f8f8f8;
    border: 1px solid #c6c6c6;
    padding: 10px 14px;
@@ -151,11 +182,9 @@ a#apps:hover {
  }
 
  input.button:focus {
+   padding: 10px 14px;
    border: 1px solid #4d90fe;
  }
-
-
-/* IDs */
 
 #logo {
   display: block;
